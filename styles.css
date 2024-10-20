@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: #ffefd5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff8dc;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    max-width: 500px;
+    position: relative;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    color: #ff69b4;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Balloon Animation */
+.balloons {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 150px;
+}
+
+.balloon {
+    width: 50px;
+    height: 70px;
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+    animation: float 4s ease-in-out infinite;
+}
+
+.balloon:before {
+    content: "";
+    width: 2px;
+    height: 30px;
+    background-color: #555;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.one {
+    background-color: #ff6347;
+    animation-duration: 4s;
+}
+
+.two {
+    background-color: #1e90ff;
+    animation-duration: 5s;
+}
+
+.three {
+    background-color: #32cd32;
+    animation-duration: 6s;
+}
+
+.four {
+    background-color: #ff4500;
+    animation-duration: 7s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
